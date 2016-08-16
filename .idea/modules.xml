@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/WappBrowser.iml" filepath="$PROJECT_DIR$/WappBrowser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wappbrowser/wappbrowser.iml" filepath="$PROJECT_DIR$/wappbrowser/wappbrowser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wapptest/wapptest.iml" filepath="$PROJECT_DIR$/wapptest/wapptest.iml" />
+    </modules>
+  </component>
+</project>

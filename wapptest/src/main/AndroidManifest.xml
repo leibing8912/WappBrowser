@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.ecpark.wapptest">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="cn.ecpark.wappbrowser.WappBrowserActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="browse.native"
+                    android:scheme="ym_browser" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".DeeplinkingActivity"
+            android:label="DeeplinkingActivity">
+            <intent-filter>
+                <action android:name="cn.ecparck.depplinking" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="deeplinking"
+                    android:scheme="wap_test" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ImageActivity"
+            android:theme="@style/ImageActivity" />
+
+    </application>
+
+</manifest>
