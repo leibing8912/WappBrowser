@@ -52,7 +52,11 @@ class PreloadController {
         if (!permission)
             return false;
         //初始化本地缓存目录
+        if (context.getExternalFilesDir("preload") == null)
+            return false;
         LOCAL_PATH = context.getExternalFilesDir("preload").getAbsolutePath();
+        if (LOCAL_PATH  == null || LOCAL_PATH.equals(""))
+            return false;
         File file = new File(LOCAL_PATH);
         if (!file.exists()) {
             file.mkdirs();
